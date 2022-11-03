@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@deno/mod.js';
+import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@v0.0.1-deno/mod.js';
 ```
 
 #### isCamelcase( value )
@@ -67,7 +67,7 @@ bool = isCamelcase( 'beep and Boop' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@deno/mod.js';
+import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@v0.0.1-deno/mod.js';
 
 console.log( isCamelcase( 'beepBoop' ) );
 // => true
