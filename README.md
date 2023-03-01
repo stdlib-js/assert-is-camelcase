@@ -24,38 +24,31 @@ limitations under the License.
 
 > Test if a value is a camelcase string.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/assert-is-camelcase
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-isCamelcase = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var isCamelcase = require( 'path/to/vendor/umd/assert-is-camelcase/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.isCamelcase;
-})();
-</script>
+var isCamelcase = require( '@stdlib/assert-is-camelcase' );
 ```
 
 #### isCamelcase( value )
@@ -90,13 +83,8 @@ bool = isCamelcase( 'beep and Boop' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var isCamelcase = require( '@stdlib/assert-is-camelcase' );
 
 console.log( isCamelcase( 'beepBoop' ) );
 // => true
@@ -115,18 +103,102 @@ console.log( isCamelcase( 'beep boop' ) );
 
 console.log( isCamelcase( 'b' ) );
 // => true
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/assert-is-camelcase-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: is-camelcase [options] [<string>]
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'beEp booP\nFOO' | is-camelcase --split /\r?\n/
+    # Escaped...
+    $ echo -n $'beEp booP\nFOO' | is-camelcase --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ is-camelcase beepBoop
+true
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n 'beep Boop' | is-camelcase
+false
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n 'beepBoop\tbeep_boop' | is-camelcase --split '\t'
+true
+false
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -136,7 +208,7 @@ console.log( isCamelcase( 'b' ) );
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/assert/is-string`][@stdlib/assert/is-string]</span><span class="delimiter">: </span><span class="description">test if a value is a string.</span>
+-   <span class="package-name">[`@stdlib/assert-is-string`][@stdlib/assert/is-string]</span><span class="delimiter">: </span><span class="description">test if a value is a string.</span>
 
 </section>
 
@@ -201,6 +273,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
+[cli-section]: https://github.com/stdlib-js/assert-is-camelcase#cli
+[cli-url]: https://github.com/stdlib-js/assert-is-camelcase/tree/cli
+[@stdlib/assert-is-camelcase]: https://github.com/stdlib-js/assert-is-camelcase/tree/main
+
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
@@ -217,7 +293,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/assert/is-string]: https://github.com/stdlib-js/assert-is-string/tree/umd
+[@stdlib/assert/is-string]: https://github.com/stdlib-js/assert-is-string
 
 <!-- </related-links> -->
 
