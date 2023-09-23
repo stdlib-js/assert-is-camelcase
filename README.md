@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@esm/index.mjs';
+import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@v0.1.0-esm/index.mjs';
 ```
 
 #### isCamelcase( value )
@@ -83,7 +83,7 @@ bool = isCamelcase( 'beep and Boop' );
 <body>
 <script type="module">
 
-import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@esm/index.mjs';
+import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@v0.1.0-esm/index.mjs';
 
 console.log( isCamelcase( 'beepBoop' ) );
 // => true
