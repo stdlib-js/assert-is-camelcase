@@ -215,12 +215,6 @@ false
 
 <section class="related">
 
-* * *
-
-## See Also
-
--   <span class="package-name">[`@stdlib/assert-is-string`][@stdlib/assert/is-string]</span><span class="delimiter">: </span><span class="description">test if a value is a string.</span>
-
 </section>
 
 <!-- /.related -->
@@ -303,8 +297,6 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 <!-- <related-links> -->
-
-[@stdlib/assert/is-string]: https://github.com/stdlib-js/assert-is-string
 
 <!-- </related-links> -->
 
