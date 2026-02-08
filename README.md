@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/assert-is-camelcase/tags). For example,
+
+```javascript
 import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@v0.2.3-esm/index.mjs';
 ```
 
@@ -83,7 +88,7 @@ bool = isCamelcase( 'beep and Boop' );
 <body>
 <script type="module">
 
-import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@v0.2.3-esm/index.mjs';
+import isCamelcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-camelcase@esm/index.mjs';
 
 console.log( isCamelcase( 'beepBoop' ) );
 // => true
